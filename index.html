@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehoboth services - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="notch"></div>
+        <div class="page-content">
+            <header class="header-brand">
+                <div class="menu-burger"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
+                 <div class="logo"><img src="images/logo_rehoboth.png" alt="Collection 1"></div>
+                <p class="brand-tagline">Notre standard est au-delà de vos attentes</p>
+            </header>
+
+            <div class="carousel-view">
+                <div class="carousel-track" id="track">
+                    <div class="carousel-slide">
+                        <img src="images/images_accueil1.jpg" alt="notre boutique">
+                        <div class="carousel-overlay"><h3 class="carousel-title">Nous avons les produits de qualité supérieures</h3></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/images_accueil2.jpg" alt="Les chapeaux">
+                        <div class="carousel-overlay"><h3 class="carousel-title">Les chapeaux toutes formes et les couleurs possibles</h3></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/images_accueil3.jpg" alt="les polos">
+                        <div class="carousel-overlay"><h3 class="carousel-title">Polos zéros et Lacostes couleurs et tailles confondues</h3></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/images_accueil3.jpg" alt="Collection 4">
+                        <div class="carousel-overlay"><h3 class="carousel-title">Des basiques intemporels</h3></div>
+                    </div>
+                </div>
+                <a href="catalogue.html" class="btn-primary btn-discover">Découvrez nos produits</a>
+                <div class="carousel-indicators">
+                    <div class="indicator-dot active" onclick="jumpToSlide(0)"></div>
+                    <div class="indicator-dot" onclick="jumpToSlide(1)"></div>
+                    <div class="indicator-dot" onclick="jumpToSlide(2)"></div>
+                    <div class="indicator-dot" onclick="jumpToSlide(3)"></div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-link active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a>
+            <a href="catalogue.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+            <a href="catalogue.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a>
+        </nav>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
