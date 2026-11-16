@@ -1,1 +1,510 @@
+git/* --- BASE & TYPOGRAPHIE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
+body {
+    background-color: #f5f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.logo img {
+    width: 60%;
+    height: 60%;
+    width: 60%;
+    height: 60%;
+    display: center;
+}
+
+/* --- CONTENEUR SMARTPHONE --- */
+.phone-container {
+    width: 375px;
+    height: 812px;
+    background-color: #ffffff;
+    /*border: 12px solid rgb(0, 0, 0);*/
+    /* border-radius: 40px;*/
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    /*  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); */
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    /*background-color: #111111;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;*/
+    z-index: 1000;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 35px;
+    padding-bottom: 65px;
+    overflow-y: auto;
+}
+
+/* --- BARRE DE NAVIGATION INFERIEURE --- */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    padding-bottom: 8px;
+}
+
+.nav-link {
+    color: #b0b0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: color 0.2s ease;
+}
+
+.nav-link.active {
+    color: #1d446c;
+}
+
+/* --- BOUTONS GENERIQUES --- */
+.btn-primary {
+    background-color: #1d446c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- BLOCS COMMUNS DES EN-TÊTES --- */
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.app-header h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    color: #222222;
+}
+
+.back-link {
+    position: absolute;
+    left: 15px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+/* --- STYLE EXCLUSIF : PAGE 1 (ACCUEIL & CARROUSEL) --- */
+.header-brand {
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    border: none;
+}
+
+.menu-burger {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    color: #333;
+}
+
+.brand-logo {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.brand-logo span {
+    font-weight: bold;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-top: 2px;
+}
+
+.brand-tagline {
+    font-size: 12px;
+    color: #777;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.carousel-view {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 6%
+}
+
+.carousel-track {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-title {
+    position: absolute;
+    bottom: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    width: 85%;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.btn-discover {
+    position: absolute;
+    z-index: 10;
+    width: 80%;
+    bottom: 110px;
+    left: 10%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.indicator-dot {
+    width: 7px;
+    height: 7px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator-dot.active {
+    background-color: #ffffff;
+    width: 18px;
+    border-radius: 4px;
+}
+
+/* --- STYLE EXCLUSIF : PAGE 2 (CATALOGUE) --- */
+.catalog-header {
+    padding: 15px 15px 5px 15px;
+}
+
+.search-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.search-title-row h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.chips-row {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.chips-row::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    padding: 8px 16px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.filter-chip.active {
+    background-color: #1d446c;
+    color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 10px 15px;
+}
+
+.item-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+}
+
+.item-media {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+}
+
+.item-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.item-title {
+    font-size: 13px;
+    color: #444444;
+}
+
+.item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.btn-buy-action {
+    background-color: #1d446c;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sticky-summary {
+    background-color: #fafafa;
+    border-top: 1px solid #eeeeee;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.summary-text h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.summary-text p {
+    font-size: 12px;
+    color: #666666;
+}
+
+.btn-validate-order {
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+/* --- STYLE EXCLUSIF : PAGE 3 (CHECKOUT) --- */
+.info-strip {
+    background-color: #f9fafb;
+    padding: 12px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    font-weight: 500;
+}
+
+.checkout-form {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.method-box {
+    border: 1.5px solid #1d446c;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.method-box.disabled {
+    border-color: #e5e7eb;
+    opacity: 0.6;
+}
+
+.method-label {
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.method-brands {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.brand-pill {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: 1px solid #dddddd;
+}
+
+.visa-style {
+    color: #0a2540;
+    background-color: #f4f8ff;
+}
+
+.mc-style {
+    color: #eb001b;
+    background-color: #fff4f4;
+}
+
+.m-pill {
+    color: #ffffff;
+    border: none;
+}
+
+.airtel-bg {
+    background-color: #ff0000;
+}
+
+.mpesa-bg {
+    background-color: #0030b5;
+}
+
+.orange-bg {
+    background-color: #f87800;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-row label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    font-size: 13px;
+}
+
+.split-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-submit-payment {
+    width: 100%;
+    padding: 14px;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+/* --- STYLE EXCLUSIF : PAGE 4 (PROFIL) --- */
+.profile-wrapper {
+    padding: 40px 20px;
+    text-align: center;
+    color: #555555;
+}
+
+.avatar-container {
+    color: #1d446c;
+    margin-bottom: 15px;
+}
+
+.profile-wrapper h3 {
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.profile-wrapper p {
+    font-size: 14px;
+    line-height: 1.5;
+}
